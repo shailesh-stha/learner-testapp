@@ -4,123 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>German Lesson Player</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #121212;
-            color: #eeeeee;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            width: auto;
-            max-width: 800px;
-            margin: 0 auto;
-            background: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            padding: 25px;
-            box-sizing: border-box;
-        }
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        audio {
-            width: 100%;
-            margin: 20px 0;
-        }
-        
-        .controls-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap; 
-            margin-top: -10px;
-            margin-bottom: 10px;
-        }
-        
-        #toggle-translation {
-            background: #333;
-            color: #eee;
-            border: 1px solid #555;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: background-color 0.2s;
-            margin-top: 10px;
-        }
-        #toggle-translation:hover {
-            background: #444;
-        }
-
-        .speed-control {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .speed-control label {
-            margin-right: 8px;
-            font-size: 0.9em;
-            color: #aaa;
-        }
-        #playback-speed {
-            background: #333;
-            color: #eee;
-            border: 1px solid #555;
-            padding: 8px;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-
-        /* --- TRANSCRIPT STYLING --- */
-        .transcript-container {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            max-height: 50vh; 
-            overflow-y: auto;
-            font-size: 1.1em; 
-        }
-        .transcript-line {
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            line-height: 1.6;
-        }
-        .speaker1 {
-            background-color: #263240;
-            border-left: 3px solid #58a6ff;
-        }
-        .speaker1 strong { color: #58a6ff; }
-        .speaker2 {
-            background-color: #303030;
-            border-left: 3px solid #888;
-        }
-        .speaker2 strong { color: #cccccc; }
-        .translation {
-            font-size: 0.9em;
-            color: #aaa;
-            margin-top: -5px;
-            margin-bottom: 15px;
-            padding-left: 20px;
-            line-height: 1.5;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="page-player">
+
+    <header>
+        <h1><a href="index.html">German Learning Library</a></h1>
+    </header>
 
     <div class="container">
         <a href="index.html">&larr; Back to Lesson List</a>
         
-        <audio id="audio-player" controls></audio>
+        <div id="player-wrapper">
+            <audio id="audio-player"></audio>
+            
+            <div class="custom-player-controls" id="custom-controls">
+                <div id="audio-loader" class="loader" style="display: none;"></div>
+                
+                <button id="play-pause-btn" aria-label="Play">
+                    <svg id="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    <svg id="icon-pause" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+                </button>
+                
+                <span id="current-time-display">0:00</span>
+                
+                <div id="progress-bar-wrapper">
+                    <div id="progress-bar-fill"></div>
+                </div>
+                
+                <span id="total-time-display">0:00</span>
+            </div>
+        </div>
         
         <div class="controls-bar">
-            <button id="toggle-translation">Hide Translations</button>
+            
+            <button id="loop-btn" class="control-btn">Loop Line</button>
+            
+            <button id="toggle-translation" class="control-btn">Hide Translations</button>
             
             <div class="speed-control">
                 <label for="playback-speed">Speed:</label>
@@ -133,92 +53,276 @@
                     <option value="1.10">1.10x</option>
                     <option value="1.15">1.15x</option>
                 </select>
-                </div>
+            </div>
+
+            <div id="view-mode-controls" class="control-btn-group">
+                <button id="view-mode-standard" class="view-mode-btn active" title="Standard View (German + English)">Standard</button>
+                <button id="view-mode-german" class="view-mode-btn" title="Immersion View (German Only)">German</button>
+                <button id="view-mode-english" class="view-mode-btn" title="Listening View (English Only)">English</button>
+            </div>
         </div>
         
-        <div id="transcript-container" class="transcript-container">
+        <div id="transcript-container" class="transcript-container view-standard">
             <p>Loading transcript...</p>
         </div>
     </div>
 
     <script>
+        // Store all transcript data globally after fetch
+        let transcriptData = []; 
+        let currentLineIndex = -1;
+        
+        // --- NEW: Recommendation 4 (Loop State) ---
+        let isLooping = false;
+
+        // --- New helper to format time as MM:SS ---
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // Function to load JSON transcript and populate the display
+        async function loadTranscript(lessonId) {
+            const transcriptContainer = document.getElementById('transcript-container');
+            const transcriptUrl = `transcript_${lessonId}.json`;
+
+            try {
+                const response = await fetch(transcriptUrl);
+                if (!response.ok) { throw new Error('Transcript JSON file not found or invalid.'); }
+                transcriptData = await response.json();
+
+                transcriptContainer.innerHTML = ''; 
+                
+                transcriptData.forEach((line, index) => {
+                    const p = document.createElement('p');
+                    
+                    p.setAttribute('data-index', index); 
+                    p.setAttribute('data-start', line.start); 
+                    p.setAttribute('data-end', line.end); 
+                    
+                    p.className = `transcript-line speaker${line.speaker}`;
+                    
+                    // --- MODIFIED: Recommendation 3 (View Modes) ---
+                    // Added <span class="german-text"> to individually hide German text
+                    p.innerHTML = `<strong>Speaker ${line.speaker}:</strong> <span class="german-text">${line.text_de}</span>`;
+                    transcriptContainer.appendChild(p);
+
+                    // Create translation paragraph
+                    const translation = document.createElement('p');
+                    translation.className = 'translation';
+                    translation.textContent = `[${line.text_en}]`;
+                    transcriptContainer.appendChild(translation);
+                });
+                
+                addJumpListeners();
+
+            } catch (error) {
+                transcriptContainer.innerHTML = `<p style="color: red;">Error loading transcript: ${error.message}</p>`;
+            }
+        }
+
+        // Function to handle transcript highlighting and scrolling
+        function syncTranscript(currentTime) {
+            // --- NEW: Recommendation 4 (Loop Logic) ---
+            if (isLooping && currentLineIndex !== -1) {
+                const currentLine = transcriptData[currentLineIndex];
+                if (currentTime >= currentLine.end || currentTime < currentLine.start) {
+                    audioPlayer.currentTime = currentLine.start;
+                    audioPlayer.play(); // Ensure it plays
+                    return; // Stop sync logic to prevent highlight flicker
+                }
+            }
+            
+            const currentLine = transcriptData.find(line => 
+                currentTime >= line.start && currentTime < line.end
+            );
+            
+            let newIndex = currentLine ? transcriptData.indexOf(currentLine) : -1;
+
+            if (newIndex !== currentLineIndex) {
+                // Remove highlight from previous line
+                if (currentLineIndex !== -1) {
+                    const prevElement = document.querySelector(`.transcript-line[data-index="${currentLineIndex}"]`);
+                    if (prevElement) prevElement.classList.remove('highlighted');
+                }
+                
+                // Add highlight to new line
+                if (newIndex !== -1) {
+                    const newElement = document.querySelector(`.transcript-line[data-index="${newIndex}"]`);
+                    if (newElement) {
+                        newElement.classList.add('highlighted');
+                        
+                        // Scroll the container to keep the current line in view
+                        if (!isLooping) { // Don't auto-scroll if looping one line
+                            newElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                        }
+                    }
+                }
+                currentLineIndex = newIndex;
+            }
+        }
+        
+        // Function to enable clicking on text to jump audio position
+        function addJumpListeners() {
+            document.querySelectorAll('.transcript-line').forEach(line => {
+                line.addEventListener('click', function() {
+                    const startTime = parseFloat(this.getAttribute('data-start'));
+                    const audioPlayer = document.getElementById('audio-player');
+                    audioPlayer.currentTime = startTime;
+                    audioPlayer.play();
+                });
+                line.style.cursor = 'pointer';
+            });
+        }
+        
+        // --- NEW: Helper function to toggle translations ---
+        function toggleTranslations() {
+            const toggleBtn = document.getElementById('toggle-translation');
+            const allTranslations = document.querySelectorAll('.translation');
+            const isHidden = allTranslations.length > 0 && allTranslations[0].style.display === 'none';
+
+            allTranslations.forEach(element => {
+                element.style.display = isHidden ? 'block' : 'none';
+            });
+            
+            toggleBtn.textContent = isHidden ? 'Hide Translations' : 'Show Translations';
+        }
+
+
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const lessonId = urlParams.get('lesson');
 
+            // --- Get All Player Elements ---
             const audioPlayer = document.getElementById('audio-player');
-            const transcriptContainer = document.getElementById('transcript-container');
-            const toggleBtn = document.getElementById('toggle-translation');
+            const customControls = document.getElementById('custom-controls');
+            const audioLoader = document.getElementById('audio-loader');
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            const iconPlay = document.getElementById('icon-play');
+            const iconPause = document.getElementById('icon-pause');
+            const currentTimeDisplay = document.getElementById('current-time-display');
+            const totalTimeDisplay = document.getElementById('total-time-display');
+            const progressBarWrapper = document.getElementById('progress-bar-wrapper');
+            const progressBarFill = document.getElementById('progress-bar-fill');
             const speedSelector = document.getElementById('playback-speed');
-            
-            let translationsAreHidden = false;
+            const transcriptContainer = document.getElementById('transcript-container');
+
+            // --- Get New Control Elements ---
+            const toggleBtn = document.getElementById('toggle-translation');
+            const loopBtn = document.getElementById('loop-btn');
+            const viewModeStandard = document.getElementById('view-mode-standard');
+            const viewModeGerman = document.getElementById('view-mode-german');
+            const viewModeEnglish = document.getElementById('view-mode-english');
 
             if (lessonId) {
+                // --- Show loader, disable controls ---
+                audioLoader.style.display = 'block';
+                customControls.classList.add('is-loading');
+
                 // --- 1. Load the Audio ---
                 const audioSource = document.createElement('source');
                 audioSource.src = `audio_${lessonId}.mp3`;
                 audioSource.type = 'audio/mpeg';
                 audioPlayer.appendChild(audioSource);
-
-                // --- 2. Load and Display the Transcript ---
-                const transcriptUrl = `transcript_${lessonId}.txt`;
                 
-                fetch(transcriptUrl)
-                    .then(response => {
-                        if (!response.ok) { throw new Error('Transcript file not found.'); }
-                        return response.text();
-                    })
-                    .then(text => {
-                        transcriptContainer.innerHTML = ''; 
-                        const lines = text.split('\n');
+                // --- 2. Load and Display the Transcript from JSON ---
+                loadTranscript(lessonId);
 
-                        lines.forEach(line => {
-                            if (line.trim() === '') return;
-                            const p = document.createElement('p');
-                            
-                            if (line.startsWith('Speaker 1:')) {
-                                p.className = 'transcript-line speaker1';
-                                p.innerHTML = `<strong>Speaker 1:</strong> ${line.substring(11)}`;
-                                transcriptContainer.appendChild(p);
-                            } 
-                            else if (line.startsWith('Speaker 2:')) {
-                                p.className = 'transcript-line speaker2';
-                                p.innerHTML = `<strong>Speaker 2:</strong> ${line.substring(11)}`;
-                                transcriptContainer.appendChild(p);
-                            }
-                            else if (line.startsWith('[')) {
-                                p.className = 'translation';
-                                p.textContent = line.substring(1, line.length - 1);
-                                transcriptContainer.appendChild(p);
-                            }
-                        });
-                    })
-                    .catch(error => {
-                        transcriptContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
-                    });
-
-                // --- 3. Add click listener for the translation button ---
-                toggleBtn.addEventListener('click', () => {
-                    translationsAreHidden = !translationsAreHidden;
-                    const allTranslations = transcriptContainer.querySelectorAll('.translation');
-                    
-                    allTranslations.forEach(element => {
-                        element.style.display = translationsAreHidden ? 'none' : 'block';
-                    });
-                    
-                    toggleBtn.textContent = translationsAreHidden ? 'Show Translations' : 'Hide Translations';
+                // --- 3. Event Listeners for Custom Player ---
+                audioPlayer.addEventListener('canplaythrough', () => {
+                    audioLoader.style.display = 'none';
+                    customControls.classList.remove('is-loading');
+                    totalTimeDisplay.textContent = formatTime(audioPlayer.duration);
                 });
 
-                // --- 4. Add listener for playback speed ---
+                playPauseBtn.addEventListener('click', () => {
+                    audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+                });
+
+                audioPlayer.addEventListener('play', () => {
+                    iconPlay.style.display = 'none';
+                    iconPause.style.display = 'block';
+                });
+                audioPlayer.addEventListener('pause', () => {
+                    iconPlay.style.display = 'block';
+                    iconPause.style.display = 'none';
+                });
+
+                // Update Progress Bar & Time & Transcript Sync
+                audioPlayer.addEventListener('timeupdate', () => {
+                    const progressPercent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                    progressBarFill.style.width = `${progressPercent}%`;
+                    currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
+                    syncTranscript(audioPlayer.currentTime);
+                });
+
+                progressBarWrapper.addEventListener('click', (e) => {
+                    const width = progressBarWrapper.clientWidth;
+                    const clickX = e.offsetX;
+                    const percent = clickX / width;
+                    audioPlayer.currentTime = percent * audioPlayer.duration;
+                });
+
+                // --- 4. Listeners for New Controls ---
+                
+                // Toggle Translations Button
+                toggleBtn.addEventListener('click', toggleTranslations);
+
+                // --- NEW: Recommendation 4 (Loop Button) ---
+                loopBtn.addEventListener('click', () => {
+                    isLooping = !isLooping;
+                    loopBtn.classList.toggle('active', isLooping);
+                });
+
+                // --- NEW: Recommendation 3 (View Modes) ---
+                function setViewMode(mode) {
+                    transcriptContainer.className = 'transcript-container ' + mode;
+                    // Update active button state
+                    viewModeStandard.classList.toggle('active', mode === 'view-standard');
+                    viewModeGerman.classList.toggle('active', mode === 'view-german-only');
+                    viewModeEnglish.classList.toggle('active', mode === 'view-english-only');
+                }
+                viewModeStandard.addEventListener('click', () => setViewMode('view-standard'));
+                viewModeGerman.addEventListener('click', () => setViewMode('view-german-only'));
+                viewModeEnglish.addEventListener('click', () => setViewMode('view-english-only'));
+
+                // --- 5. Add listener for playback speed ---
                 speedSelector.addEventListener('change', () => {
                     const newSpeed = parseFloat(speedSelector.value);
                     audioPlayer.playbackRate = newSpeed;
                 });
+                
+                // --- NEW: Recommendation 2 (Keyboard Shortcuts) ---
+                window.addEventListener('keydown', (e) => {
+                    // Don't hijack shortcuts if user is typing in a text field (none exist, but good practice)
+                    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+                    switch (e.key) {
+                        case ' ': // Spacebar
+                            e.preventDefault(); // Stop page from scrolling
+                            playPauseBtn.click();
+                            break;
+                        case 'ArrowLeft':
+                            audioPlayer.currentTime -= 5; // Rewind 5s
+                            break;
+                        case 'ArrowRight':
+                            audioPlayer.currentTime += 5; // Forward 5s
+                            break;
+                        case 't':
+                        case 'T':
+                            toggleTranslations(); // Toggle translations
+                            break;
+                    }
+                });
 
             } else {
                 transcriptContainer.innerHTML = '<p>Error: No lesson selected.</p>';
-                toggleBtn.style.display = 'none';
-                document.querySelector('.speed-control').style.display = 'none';
+                document.getElementById('player-wrapper').style.display = 'none';
+                document.querySelector('.controls-bar').style.display = 'none';
             }
         });
     </script>

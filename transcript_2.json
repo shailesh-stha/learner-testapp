@@ -1,0 +1,149 @@
+[
+    {
+        "start": 0.50,
+        "end": 8.50,
+        "speaker": 1,
+        "text_de": "Guten Morgen, Herr Müller. Fangen wir gleich mit der Organisation der Workshops für das neue Team an. Haben Sie die Liste der Referenten vorbereitet?",
+        "text_en": "Good morning, Mr. Müller. Let's start right away with the organization of the workshops for the new team. Did you prepare the list of speakers/presenters?"
+    },
+    {
+        "start": 9.00,
+        "end": 17.50,
+        "speaker": 2,
+        "text_de": "Guten Morgen. Ja, ich habe die Liste fertig. Es ist wichtig, dass wir die internen Experten frühzeitig anfragen, bevor ihr Kalender voll ist.",
+        "text_en": "Good morning. Yes, I finished the list. It is important that we ask the internal experts early, before their calendar is full."
+    },
+    {
+        "start": 18.00,
+        "end": 24.50,
+        "speaker": 1,
+        "text_de": "Absolut. Wir müssen uns auch um die Termine kümmern. Ich schlage vor, dass die Schulungen an drei aufeinanderfolgenden Donnerstagen stattfinden.",
+        "text_en": "Absolutely. We also have to take care of the dates. I suggest that the training sessions take place on three consecutive Thursdays."
+    },
+    {
+        "start": 25.00,
+        "end": 32.50,
+        "speaker": 2,
+        "text_de": "Das klingt vernünftig. Wissen Sie schon, ob wir den großen Schulungsraum nutzen können? Der bietet genug Platz für alle Teilnehmer.",
+        "text_en": "That sounds reasonable. Do you already know if we can use the large training room? It offers enough space for all participants."
+    },
+    {
+        "start": 33.00,
+        "end": 40.00,
+        "speaker": 1,
+        "text_de": "Ich habe den Raum reserviert, aber wir müssen noch die Technik prüfen: Beamer und Mikrofon. Könnten Sie das übernehmen?",
+        "text_en": "I have reserved the room, but we still have to check the technology: projector and microphone. Could you take care of that?"
+    },
+    {
+        "start": 40.50,
+        "end": 48.00,
+        "speaker": 2,
+        "text_de": "Natürlich. Ich kontaktiere sofort die IT-Abteilung, damit sie alles testet und einrichtet. Das wird bald erledigt sein.",
+        "text_en": "Of course. I will contact the IT department immediately, so that they test and set up everything. That will be done soon."
+    },
+    {
+        "start": 48.50,
+        "end": 54.50,
+        "speaker": 1,
+        "text_de": "Danke. Wir dürfen nicht vergessen, dass wir auch die Verpflegung organisieren müssen – Kaffee und Gebäck für die Pausen.",
+        "text_en": "Thank you. We must not forget that we also have to organize the catering – coffee and pastries for the breaks."
+    },
+    {
+        "start": 55.00,
+        "end": 62.00,
+        "speaker": 2,
+        "text_de": "Stimmt. Ich kann mich an den Caterer wenden. Soll ich für alle drei Tage das gleiche Menü bestellen, wenn das preiswerter ist?",
+        "text_en": "That's right. I can contact the caterer. Should I order the same menu for all three days, if that is cheaper?"
+    },
+    {
+        "start": 62.50,
+        "end": 69.50,
+        "speaker": 1,
+        "text_de": "Besser nicht. Ich möchte, dass wir ein bisschen Abwechslung haben, denn es ist eine ganztägige Veranstaltung.",
+        "text_en": "Better not. I would like us to have a little variety, because it is an all-day event."
+    },
+    {
+        "start": 70.00,
+        "end": 77.00,
+        "speaker": 2,
+        "text_de": "Einverstanden. Ich werde verschiedene Optionen anfragen und Ihnen dann eine Übersicht mit den Kosten schicken.",
+        "text_en": "Agreed. I will request different options and then send you an overview with the costs."
+    },
+    {
+        "start": 77.50,
+        "end": 83.50,
+        "speaker": 1,
+        "text_de": "Ausgezeichnet. Und wie sieht es mit dem Handout aus? Müssen wir das vorher drucken lassen?",
+        "text_en": "Excellent. And what about the handout? Do we have to have that printed beforehand?"
+    },
+    {
+        "start": 84.00,
+        "end": 90.50,
+        "speaker": 2,
+        "text_de": "Ich habe die Druckerei bereits informiert. Das Handout wird morgen fertig sein, solange wir die endgültige Datei heute senden.",
+        "text_en": "I have already informed the printing company. The handout will be ready tomorrow, as long as we send the final file today."
+    },
+    {
+        "start": 91.00,
+        "end": 97.50,
+        "speaker": 1,
+        "text_de": "Perfekt. Dann schicke ich Ihnen die Datei sofort nach unserem Treffen zu. Dann können Sie sie weiterleiten.",
+        "text_en": "Perfect. Then I will send you the file immediately after our meeting. Then you can forward it."
+    },
+    {
+        "start": 98.00,
+        "end": 103.50,
+        "speaker": 2,
+        "text_de": "Das ist gut. Ich werde auch die Bestätigungs-E-Mail an alle Teilnehmer schicken, damit sie wissen, was sie erwartet.",
+        "text_en": "That is good. I will also send the confirmation email to all participants, so that they know what to expect."
+    },
+    {
+        "start": 104.00,
+        "end": 107.50,
+        "speaker": 1,
+        "text_de": "Sehr gute Idee. Ich freue mich, dass die Planung so gut läuft.",
+        "text_en": "Very good idea. I am happy that the planning is going so well."
+    },
+    {
+        "start": 108.00,
+        "end": 112.50,
+        "speaker": 2,
+        "text_de": "Ich mich auch. Wenn wir alles auf der Checkliste abgehakt haben, können wir uns entspannen.",
+        "text_en": "Me too. If we have checked off everything on the checklist, we can relax."
+    },
+    {
+        "start": 113.00,
+        "end": 117.00,
+        "speaker": 1,
+        "text_de": "Absolut. Wir haben fast alles erledigt. Nur die Namensschilder fehlen noch.",
+        "text_en": "Absolutely. We have almost everything done. Only the name badges are still missing."
+    },
+    {
+        "start": 117.50,
+        "end": 121.50,
+        "speaker": 2,
+        "text_de": "Kein Problem. Die Namensschilder erstelle ich noch heute. Ich kümmere mich darum.",
+        "text_en": "No problem. I will create the name badges today. I will take care of it."
+    },
+    {
+        "start": 122.00,
+        "end": 127.50,
+        "speaker": 1,
+        "text_de": "Wunderbar! Vielen Dank für Ihre Mühe. Ich wünsche Ihnen einen produktiven Tag.",
+        "text_en": "Wonderful! Thank you very much for your effort. I wish you a productive day."
+    },
+    {
+        "start": 128.00,
+        "end": 129.50,
+        "speaker": 2,
+        "text_de": "Ebenfalls. Bis später!",
+        "text_en": "Likewise. See you later!"
+    },
+    {
+        "start": 130.00,
+        "end": 131.00,
+        "speaker": 1,
+        "text_de": "Bis später.",
+        "text_en": "See you later."
+    }
+]

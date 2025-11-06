@@ -1,0 +1,114 @@
+[
+    {
+        "start": 0.50,
+        "end": 9.50,
+        "speaker": 1,
+        "text_de": "Guten Tag, Herr Fischer. Wir müssen die endgültige Strategie für unser Hybrid-Modell festlegen. Es ist wichtig, dass alle Abteilungen dies mittragen.",
+        "text_en": "Good day, Mr. Fischer. We need to finalize the definitive strategy for our hybrid model. It is important that all departments support this."
+    },
+    {
+        "start": 10.00,
+        "end": 17.50,
+        "speaker": 2,
+        "text_de": "Guten Tag. Ich bin grundsätzlich dafür, allerdings gibt es einige Bedenken, insbesondere was die Gewährleistung der Teamkohäsion betrifft.",
+        "text_en": "Good day. I am generally in favor of it, however, there are some concerns, particularly regarding guaranteeing team cohesion."
+    },
+    {
+        "start": 18.00,
+        "end": 26.50,
+        "speaker": 1,
+        "text_de": "Diese Bedenken sind berechtigt. Wir schlagen vor, dass die Anwesenheitstage nicht zufällig gewählt, sondern von der Teamleitung koordiniert werden.",
+        "text_en": "These concerns are justified. We suggest that the days of presence are not chosen randomly, but rather coordinated by the team management."
+    },
+    {
+        "start": 27.00,
+        "end": 35.00,
+        "speaker": 2,
+        "text_de": "Insofern würde sichergestellt, dass die notwendigen Meetings persönlich stattfinden können. Aber was passiert mit der Produktivität, wenn die Mitarbeiter abgelenkt sind?",
+        "text_en": "In that respect, it would be ensured that the necessary meetings can take place in person. But what happens to productivity if employees are distracted?"
+    },
+    {
+        "start": 35.50,
+        "end": 44.00,
+        "speaker": 1,
+        "text_de": "Studien zufolge steigert das hybride Arbeiten die Effizienz, da monotone Aufgaben zu Hause in Ruhe erledigt werden können.",
+        "text_en": "According to studies, hybrid work increases efficiency, as monotonous tasks can be completed peacefully at home."
+    },
+    {
+        "start": 44.50,
+        "end": 52.00,
+        "speaker": 2,
+        "text_de": "Ich stimme zu, aber die Einhaltung der Arbeitszeiten muss streng überwacht werden, damit kein Missbrauch betrieben wird.",
+        "text_en": "I agree, but adherence to working hours must be strictly monitored, so that abuse is not practiced."
+    },
+    {
+        "start": 52.50,
+        "end": 61.50,
+        "speaker": 1,
+        "text_de": "Diesbezüglich wurde entschieden, dass die Kernarbeitszeit beibehalten wird. Zudem werden alle Arbeitsergebnisse digital dokumentiert, sodass Transparenz gewährleistet ist.",
+        "text_en": "In this regard, it was decided that core working hours will be maintained. Furthermore, all work results will be documented digitally, so that transparency is guaranteed."
+    },
+    {
+        "start": 62.00,
+        "end": 70.00,
+        "speaker": 2,
+        "text_de": "Gut. Eine weitere Sorge ist die IT-Sicherheit. Wie verhindern wir, dass sensible Daten außerhalb des Büros kompromittiert werden?",
+        "text_en": "Good. Another concern is IT security. How do we prevent sensitive data from being compromised outside the office?"
+    },
+    {
+        "start": 70.50,
+        "end": 79.50,
+        "speaker": 1,
+        "text_de": "Alle Laptops werden mit einer Zwei-Faktor-Authentifizierung ausgestattet. Außerdem muss ein VPN benutzt werden, bevor auf die Server zugegriffen werden kann.",
+        "text_en": "All laptops will be equipped with two-factor authentication. Furthermore, a VPN must be used before the servers can be accessed."
+    },
+    {
+        "start": 80.00,
+        "end": 88.00,
+        "speaker": 2,
+        "text_de": "Das klingt nach einem soliden Plan. Obwohl die Umstellung für einige ältere Kollegen eine Herausforderung sein wird, überwiegen die Vorteile.",
+        "text_en": "That sounds like a solid plan. Although the transition will be a challenge for some older colleagues, the advantages outweigh the disadvantages."
+    },
+    {
+        "start": 88.50,
+        "end": 97.00,
+        "speaker": 1,
+        "text_de": "Absolut. Deshalb werden umfassende Schulungen angeboten, damit jeder mit den neuen Tools optimal umgehen kann.",
+        "text_en": "Absolutely. That's why comprehensive training sessions are being offered, so that everyone can handle the new tools optimally."
+    },
+    {
+        "start": 97.50,
+        "end": 105.00,
+        "speaker": 2,
+        "text_de": "Ich schlage vor, dass wir eine Pilotphase von drei Monaten einführen. Danach können wir die Ergebnisse analysieren und die Strategie anpassen.",
+        "text_en": "I suggest that we introduce a pilot phase of three months. After that, we can analyze the results and adjust the strategy."
+    },
+    {
+        "start": 105.50,
+        "end": 110.50,
+        "speaker": 1,
+        "text_de": "Die Pilotphase ist eine hervorragende Ergänzung. Das gibt uns mehr Sicherheit.",
+        "text_en": "The pilot phase is an excellent addition. That gives us more certainty."
+    },
+    {
+        "start": 111.00,
+        "end": 117.00,
+        "speaker": 2,
+        "text_de": "Sehr gut. Dann werde ich die Abteilungsleiter über die Pilotphase in Kenntnis setzen.",
+        "text_en": "Very good. Then I will inform the department managers about the pilot phase."
+    },
+    {
+        "start": 117.50,
+        "end": 120.00,
+        "speaker": 1,
+        "text_de": "Vielen Dank, Herr Fischer. Ich schicke Ihnen das Protokoll.",
+        "text_en": "Thank you very much, Mr. Fischer. I will send you the protocol."
+    },
+    {
+        "start": 120.50,
+        "end": 122.00,
+        "speaker": 2,
+        "text_de": "Perfekt. Bis dann.",
+        "text_en": "Perfect. See you then."
+    }
+]

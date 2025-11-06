@@ -1,0 +1,135 @@
+[
+    {
+        "start": 0.50,
+        "end": 8.00,
+        "speaker": 1,
+        "text_de": "Guten Morgen, Frau Jäger. Ich muss Sie sprechen. Die Lieferung der neuen Komponenten aus China ist um zwei Tage verzögert.",
+        "text_en": "Good morning, Ms. Jäger. I need to speak to you. The delivery of the new components from China is delayed by two days."
+    },
+    {
+        "start": 8.50,
+        "end": 15.50,
+        "speaker": 2,
+        "text_de": "Guten Morgen. Das ist schlecht. Wissen Sie schon, warum es eine Verzögerung gibt? Wir brauchen diese Teile dringend.",
+        "text_en": "Good morning. That is bad. Do you already know why there is a delay? We urgently need these parts."
+    },
+    {
+        "start": 16.00,
+        "end": 23.50,
+        "speaker": 1,
+        "text_de": "Sie sagen, es gab ein Problem beim Zoll. Ich habe die Spedition kontaktiert, damit sie uns die genauen Gründe nennt.",
+        "text_en": "They say there was a problem at customs. I have contacted the shipping company so that they tell us the exact reasons."
+    },
+    {
+        "start": 24.00,
+        "end": 30.00,
+        "speaker": 2,
+        "text_de": "Okay. Es ist wichtig, dass wir die Produktionsleitung informieren, bevor sie die Maschinen starten.",
+        "text_en": "Okay. It is important that we inform the production management before they start the machines."
+    },
+    {
+        "start": 30.50,
+        "end": 37.00,
+        "speaker": 1,
+        "text_de": "Das habe ich bereits getan. Sie schlagen vor, dass wir die Arbeit mit den Restbeständen aus dem Lager beginnen.",
+        "text_en": "I have already done that. They suggest that we start the work with the remaining stock from the warehouse."
+    },
+    {
+        "start": 37.50,
+        "end": 44.50,
+        "speaker": 2,
+        "text_de": "Ist das genug? Wir müssen prüfen, wie viele Restbestände wir noch haben, damit wir die Verzögerung überbrücken können.",
+        "text_en": "Is that enough? We must check how much remaining stock we still have, so that we can bridge the delay."
+    },
+    {
+        "start": 45.00,
+        "end": 52.00,
+        "speaker": 1,
+        "text_de": "Ich habe eine Übersicht von gestern Abend. Es reicht für ungefähr einen Tag. Wir brauchen also eine andere Lösung.",
+        "text_en": "I have an overview from yesterday evening. It is enough for about one day. We therefore need another solution."
+    },
+    {
+        "start": 52.50,
+        "end": 60.50,
+        "speaker": 2,
+        "text_de": "Könnten wir die fehlenden Komponenten nicht bei unserem Zulieferer in Deutschland bestellen, auch wenn es teurer ist?",
+        "text_en": "Couldn't we order the missing components from our supplier in Germany, even if it is more expensive?"
+    },
+    {
+        "start": 61.00,
+        "end": 68.00,
+        "speaker": 1,
+        "text_de": "Ich habe das geprüft. Die Lieferzeit beträgt dort mindestens drei Tage. Das wäre keine wirkliche Alternative.",
+        "text_en": "I checked that. The delivery time there is at least three days. That would not be a real alternative."
+    },
+    {
+        "start": 68.50,
+        "end": 75.50,
+        "speaker": 2,
+        "text_de": "Schade. Dann müssen wir die Schicht am zweiten Tag absagen. Ich befürchte, dass wir das Personal informieren müssen.",
+        "text_en": "A pity. Then we have to cancel the shift on the second day. I am afraid that we must inform the personnel."
+    },
+    {
+        "start": 76.00,
+        "end": 81.00,
+        "speaker": 1,
+        "text_de": "Das ist der schwierigste Teil. Wer soll die Information an die Mitarbeiter weitergeben?",
+        "text_en": "That is the hardest part. Who should pass on the information to the employees?"
+    },
+    {
+        "start": 81.50,
+        "end": 87.50,
+        "speaker": 2,
+        "text_de": "Ich übernehme das, weil ich für die Personalplanung zuständig bin. Es ist meine Verantwortung.",
+        "text_en": "I will take care of that, because I am responsible for personnel planning. It is my responsibility."
+    },
+    {
+        "start": 88.00,
+        "end": 94.50,
+        "speaker": 1,
+        "text_de": "Das ist sehr freundlich. Ich werde Ihnen die offizielle Mitteilung vom Zoll weiterleiten, sobald ich sie erhalte.",
+        "text_en": "That is very kind. I will forward you the official notification from customs, as soon as I receive it."
+    },
+    {
+        "start": 95.00,
+        "end": 99.00,
+        "speaker": 2,
+        "text_de": "Danke. Ich hoffe, dass die Lieferung nicht noch einmal verschoben wird.",
+        "text_en": "Thank you. I hope that the delivery won't be postponed again."
+    },
+    {
+        "start": 99.50,
+        "end": 103.50,
+        "speaker": 1,
+        "text_de": "Das hoffe ich auch. Lassen Sie uns in einer Stunde noch einmal kurz sprechen.",
+        "text_en": "I hope so too. Let's talk briefly again in an hour."
+    },
+    {
+        "start": 104.00,
+        "end": 105.50,
+        "speaker": 2,
+        "text_de": "Einverstanden. Bis dann.",
+        "text_en": "Agreed. Until then."
+    },
+    {
+        "start": 106.00,
+        "end": 107.00,
+        "speaker": 1,
+        "text_de": "Bis dann.",
+        "text_en": "Until then."
+    },
+    {
+        "start": 107.50,
+        "end": 108.50,
+        "speaker": 2,
+        "text_de": "Tschüss.",
+        "text_en": "Bye."
+    },
+    {
+        "start": 109.00,
+        "end": 110.00,
+        "speaker": 1,
+        "text_de": "Tschüss.",
+        "text_en": "Bye."
+    }
+]

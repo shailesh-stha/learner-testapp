@@ -1,0 +1,163 @@
+[
+    {
+        "start": 0.50,
+        "end": 7.00,
+        "speaker": 1,
+        "text_de": "Guten Tag. Wir sind zur finalen Abstimmung der Anlage hier. Haben Sie die letzten Änderungen von Firma C erhalten?",
+        "text_en": "Good day. We are here for the final finalization of the document/appendix. Did you receive the last changes from Company C?"
+    },
+    {
+        "start": 6.50,
+        "end": 14.50,
+        "speaker": 2,
+        "text_de": "Guten Tag. Ja, ich habe sie gestern Abend geprüft. Die Struktur der Anlage sieht gut aus, aber ich habe noch eine Frage zur Datenbankwartung.",
+        "text_en": "Good day. Yes, I checked them yesterday evening. The structure of the document looks good, but I still have a question about database maintenance."
+    },
+    {
+        "start": 15.00,
+        "end": 25.00,
+        "speaker": 1,
+        "text_de": "Das ist ein wichtiger Punkt. Unsere Verantwortlichkeit ist die Datenbank selbst. Die tägliche Wartung übernimmt aber Firma C, damit die Stabilität gewährleistet ist.",
+        "text_en": "That is an important point. Our responsibility is the database itself. However, Company C takes over the daily maintenance, so that stability is guaranteed."
+    },
+    {
+        "start": 25.50,
+        "end": 31.50,
+        "speaker": 2,
+        "text_de": "Verstehe. Ist in der Anlage klar definiert, wann die Informationsextraktion aus den Dokumenten beginnen soll?",
+        "text_en": "I understand. Is it clearly defined in the document when the information extraction from the documents should begin?"
+    },
+    {
+        "start": 32.00,
+        "end": 39.50,
+        "speaker": 1,
+        "text_de": "Ja, das ist es. Zuerst müssen wir die Ontologie fertigstellen, bevor wir mit der Extraktion starten. Das ist in Phase 2 eingeplant.",
+        "text_en": "Yes, it is. First, we have to finalize the ontology, before we start with the extraction. That is planned for Phase 2."
+    },
+    {
+        "start": 40.00,
+        "end": 48.00,
+        "speaker": 2,
+        "text_de": "Okay. Mir ist aufgefallen, dass der Chatbot in der Anlage unter LLM gelistet ist. Ist das korrekt, oder sollte er eine eigene Kategorie bekommen?",
+        "text_en": "Okay. I noticed that the chatbot is listed under LLM in the document. Is that correct, or should it get its own category?"
+    },
+    {
+        "start": 48.50,
+        "end": 56.50,
+        "speaker": 1,
+        "text_de": "Wir haben ihn unter LLM belassen, weil der Chatbot direkt auf dem Large Language Model basiert. Er ist ein Anwendungsteil.",
+        "text_en": "We kept it under LLM, because the chatbot is directly based on the Large Language Model. It is an application part."
+    },
+    {
+        "start": 57.00,
+        "end": 68.50,
+        "speaker": 2,
+        "text_de": "Das macht Sinn. Aber die RAG-Komponente – Retrieval-Augmented Generation – braucht eine klare Rolle. Wer ist für das GraphRAG zuständig?",
+        "text_en": "That makes sense. But the RAG component – Retrieval-Augmented Generation – needs a clear role. Who is responsible for the GraphRAG?"
+    },
+    {
+        "start": 69.00,
+        "end": 79.00,
+        "speaker": 1,
+        "text_de": "Die Entwicklung des GraphRAG-Systems ist unsere Aufgabe, während Firma C für die Anbindung an die öffentlichen Dokumente verantwortlich ist.",
+        "text_en": "The development of the GraphRAG system is our task, while Company C is responsible for the connection to the public documents."
+    },
+    {
+        "start": 79.50,
+        "end": 88.00,
+        "speaker": 2,
+        "text_de": "Gut. Dann ist meine Firma für die Feinabstimmung des LLM zuständig, damit es unsere spezifischen Firmen-Dokumente besser versteht.",
+        "text_en": "Good. Then my company is responsible for the fine-tuning of the LLM, so that it better understands our specific company documents."
+    },
+    {
+        "start": 88.50,
+        "end": 94.00,
+        "speaker": 1,
+        "text_de": "Das ist sehr wichtig. Wissen Sie schon, welche spezifischen Dokumente dafür extrahiert werden müssen?",
+        "text_en": "That is very important. Do you already know which specific documents have to be extracted for that?"
+    },
+    {
+        "start": 94.50,
+        "end": 104.00,
+        "speaker": 2,
+        "text_de": "Ja, es sind alle internen Vertragsdokumente und Handbücher, die älter als fünf Jahre sind. Das muss in die Ontologie einfließen.",
+        "text_en": "Yes, they are all internal contract documents and manuals, which are older than five years. That must be included in the ontology."
+    },
+    {
+        "start": 104.50,
+        "end": 113.50,
+        "speaker": 1,
+        "text_de": "Einverstanden. Ein letzter Punkt: Die Server und ihre Wartung sind komplett die Verantwortlichkeit von Firma C, oder? Das steht so in Kapitel 4.",
+        "text_en": "Agreed. A final point: The servers and their maintenance are completely the responsibility of Company C, right? That's what it says in Chapter 4."
+    },
+    {
+        "start": 114.00,
+        "end": 121.50,
+        "speaker": 2,
+        "text_de": "Fast. Firma C wartet die Server, aber wir liefern die Monitoring-Tools, damit wir die Leistung überwachen können.",
+        "text_en": "Almost. Company C maintains the servers, but we deliver the monitoring tools, so that we can monitor the performance."
+    },
+    {
+        "start": 122.00,
+        "end": 129.00,
+        "speaker": 1,
+        "text_de": "Perfekt. Ich denke, mit diesen klaren Verantwortlichkeiten kann die Anlage jetzt zur Unterschrift geschickt werden.",
+        "text_en": "Perfect. I think, with these clear responsibilities, the document can now be sent for signature."
+    },
+    {
+        "start": 129.50,
+        "end": 137.00,
+        "speaker": 2,
+        "text_de": "Ausgezeichnete Arbeit. Ich bin froh, dass wir uns über diese komplexen technischen Aspekte so schnell einigen konnten.",
+        "text_en": "Excellent work. I am glad that we could agree on these complex technical aspects so quickly."
+    },
+    {
+        "start": 137.50,
+        "end": 144.50,
+        "speaker": 1,
+        "text_de": "Das bin ich auch. Es ist wichtig, dass alle drei Firmen genau wissen, was zu tun ist, bevor das Projekt offiziell startet.",
+        "text_en": "I am too. It is important that all three companies know exactly what to do, before the project officially starts."
+    },
+    {
+        "start": 145.00,
+        "end": 149.00,
+        "speaker": 2,
+        "text_de": "Absolut. Ich werde jetzt meine Notizen in die Anlage einfügen. Das sollte nur eine Stunde dauern.",
+        "text_en": "Absolutely. I will now insert my notes into the document. That should only take an hour."
+    },
+    {
+        "start": 149.50,
+        "end": 153.50,
+        "speaker": 1,
+        "text_de": "Sehr gut. Dann schicke ich Ihnen die finale digitale Version zum Gegenzeichnen zu.",
+        "text_en": "Very good. Then I will send you the final digital version for counter-signing."
+    },
+    {
+        "start": 154.00,
+        "end": 157.00,
+        "speaker": 2,
+        "text_de": "Machen Sie das bitte. Ich warte auf Ihre E-Mail.",
+        "text_en": "Please do that. I am waiting for your email."
+    },
+    {
+        "start": 157.50,
+        "end": 159.50,
+        "speaker": 1,
+        "text_de": "Bestens. Ich wünsche Ihnen noch einen schönen Nachmittag!",
+        "text_en": "Excellent. I wish you a nice afternoon!"
+    },
+    {
+        "start": 160.00,
+        "end": 162.00,
+        "speaker": 2,
+        "text_de": "Danke, Ihnen auch. Auf Wiedersehen.",
+        "text_en": "Thank you, you too. Goodbye."
+    },
+    {
+        "start": 162.50,
+        "end": 164.00,
+        "speaker": 1,
+        "text_de": "Auf Wiedersehen.",
+        "text_en": "Goodbye."
+    }
+]

@@ -1,0 +1,32 @@
+Speaker 1: Guten Tag, Herr Fischer. Wir müssen die endgültige Strategie für unser Hybrid-Modell festlegen. Es ist wichtig, dass alle Abteilungen dies mittragen.
+[Good day, Mr. Fischer. We need to finalize the definitive strategy for our hybrid model. It is important that all departments support this.]
+Speaker 2: Guten Tag. Ich bin grundsätzlich dafür, allerdings gibt es einige Bedenken, insbesondere was die Gewährleistung der Teamkohäsion betrifft.
+[Good day. I am generally in favor of it, however, there are some concerns, particularly regarding guaranteeing team cohesion.]
+Speaker 1: Diese Bedenken sind berechtigt. Wir schlagen vor, dass die Anwesenheitstage nicht zufällig gewählt, sondern von der Teamleitung koordiniert werden.
+[These concerns are justified. We suggest that the days of presence are not chosen randomly, but rather coordinated by the team management.]
+Speaker 2: Insofern würde sichergestellt, dass die notwendigen Meetings persönlich stattfinden können. Aber was passiert mit der Produktivität, wenn die Mitarbeiter abgelenkt sind?
+[In that respect, it would be ensured that the necessary meetings can take place in person. But what happens to productivity if employees are distracted?]
+Speaker 1: Studien zufolge steigert das hybride Arbeiten die Effizienz, da monotone Aufgaben zu Hause in Ruhe erledigt werden können.
+[According to studies, hybrid work increases efficiency, as monotonous tasks can be completed peacefully at home.]
+Speaker 2: Ich stimme zu, aber die Einhaltung der Arbeitszeiten muss streng überwacht werden, damit kein Missbrauch betrieben wird.
+[I agree, but adherence to working hours must be strictly monitored, so that abuse is not practiced.]
+Speaker 1: Diesbezüglich wurde entschieden, dass die Kernarbeitszeit beibehalten wird. Zudem werden alle Arbeitsergebnisse digital dokumentiert, sodass Transparenz gewährleistet ist.
+[In this regard, it was decided that core working hours will be maintained. Furthermore, all work results will be documented digitally, so that transparency is guaranteed.]
+Speaker 2: Gut. Eine weitere Sorge ist die IT-Sicherheit. Wie verhindern wir, dass sensible Daten außerhalb des Büros kompromittiert werden?
+[Good. Another concern is IT security. How do we prevent sensitive data from being compromised outside the office?]
+Speaker 1: Alle Laptops werden mit einer Zwei-Faktor-Authentifizierung ausgestattet. Außerdem muss ein VPN benutzt werden, bevor auf die Server zugegriffen werden kann.
+[All laptops will be equipped with two-factor authentication. Furthermore, a VPN must be used before the servers can be accessed.]
+Speaker 2: Das klingt nach einem soliden Plan. Obwohl die Umstellung für einige ältere Kollegen eine Herausforderung sein wird, überwiegen die Vorteile.
+[That sounds like a solid plan. Although the transition will be a challenge for some older colleagues, the advantages outweigh the disadvantages.]
+Speaker 1: Absolut. Deshalb werden umfassende Schulungen angeboten, damit jeder mit den neuen Tools optimal umgehen kann.
+[Absolutely. That's why comprehensive training sessions are being offered, so that everyone can handle the new tools optimally.]
+Speaker 2: Ich schlage vor, dass wir eine Pilotphase von drei Monaten einführen. Danach können wir die Ergebnisse analysieren und die Strategie anpassen.
+[I suggest that we introduce a pilot phase of three months. After that, we can analyze the results and adjust the strategy.]
+Speaker 1: Die Pilotphase ist eine hervorragende Ergänzung. Das gibt uns mehr Sicherheit.
+[The pilot phase is an excellent addition. That gives us more certainty.]
+Speaker 2: Sehr gut. Dann werde ich die Abteilungsleiter über die Pilotphase in Kenntnis setzen.
+[Very good. Then I will inform the department managers about the pilot phase.]
+Speaker 1: Vielen Dank, Herr Fischer. Ich schicke Ihnen das Protokoll.
+[Thank you very much, Mr. Fischer. I will send you the protocol.]
+Speaker 2: Perfekt. Bis dann.
+[Perfect. See you then.]
